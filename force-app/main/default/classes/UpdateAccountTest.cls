@@ -44,19 +44,19 @@ private class UpdateAccountTest {
 
     System.assertEquals(2, UpdateAccount);
    }
-   //test the low priority 
-   @isTest static void testLowPriority(){
-    Account a = [SELECT Name, AnnualRevenue 
-                            FROM Account
-                            WHERE Name LIKE 'Test Account%' and AnnualRevenue < 200000000 LIMIT 1];
+//    //test the low priority 
+//    @isTest static void testLowPriority(){
+//     Account a = [SELECT Name, AnnualRevenue 
+//                             FROM Account
+//                             WHERE Name LIKE 'Test Account%' and AnnualRevenue < 200000000 LIMIT 1];
     
     
-    Test.startTest();
-    UpdateAccount.updatePriority(a);
-    Test.stopTest();
+//     Test.startTest();
+//     UpdateAccount.updatePriority(a);
+//     Test.stopTest();
 
-    System.assertEquals(a.CustomerPriority__c , 'Low', 'Error customer priority less the 200M');
-   }
+//     System.assertEquals(a.CustomerPriority__c , 'Low', 'Error customer priority less the 200M');
+//    }
 
 
    @isTest static void testAnnualRevenueMultiple(){
