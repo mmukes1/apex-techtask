@@ -3,8 +3,9 @@ public  inherited sharing  class AccountUtils {
 public static List<Id> createAcc(List<String> AccNames){ 
  //list to hold the Ids of the new accounts 
               List<Id> accountId = new List<Id>(); 
+              //list that will hold the new accounts 
             List<Account> accounts = new List<Account>();
-               //list that will hold the new accounts 
+               // to check the duplicate accounts 
                try {
                    for (Integer i = 0; i < AccNames.size(); i ++){
                        String name = AccNames[i];
